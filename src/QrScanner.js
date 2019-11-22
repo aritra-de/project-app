@@ -20,7 +20,7 @@ class QRScanner extends Component {
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
             .join('&');
         }
-        axios.post('http://192.168.43.133:8080/attandance_application/Register',encodeForm(formData))
+        axios.post('http://127.0.0.1:8080/attandance_application/Register',encodeForm(formData))
         .then(function (reply) {
         // handle success
         })
