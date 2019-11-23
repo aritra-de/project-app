@@ -22,7 +22,7 @@ class LoginScreen extends Component {
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
             .join('&');
         }
-        axios.post('https://192.168.43.133:8080/attandance_application/ValidateUser',encodeForm(formData))
+        axios.post('http://127.0.0.1:8080/attandance_application/ValidateUser',encodeForm(formData))
         .then(function (reply) {
         // handle success
         if(reply.data==="teacher")
